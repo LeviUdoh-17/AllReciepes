@@ -13,9 +13,13 @@
 </head>
 <body>
     <header id="header" class="fullContainer">
-        <nav id="nav1">
-            <img src="/public/Allrecipes_Logo.jpg" id="logo" alt="All recipes logo">
+        <nav id="nav1" style="z-index: 1000;">
             <ul>
+                <a href="#">
+                    <li class="nav1links">
+                        <img src="/public/Allrecipes_Logo.jpg" id="logo" alt="All recipes logo">
+                    </li>
+                </a>
                 <a href="#">
                     <li class="nav1links">
                         <div>
@@ -30,19 +34,38 @@
                         </div>
                     </li>
                 </a>
-                <a href="#">
-                    <li class="nav1links">
+                <li class="nav1links">
+                    <a href="#">
                         <div id="login">
-                            <img src="/public/login.png" alt="User">
-                            <p>Log In</p>
+                        <img src="/public/login.png" alt="User">
+                        <p>Log In</p>
                         </div>
+                    </a>
                     </li>
-                </a>
-                <a href="#">
-                    <li class="nav1links navDivider">
-                        Magazine <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-                    </li>
-                </a>
+
+                    <!-- DROPDOWN -->
+                <li style="width: max-content !important;" class="dropdown-toggle dropdown">
+                    <div class="navDivider nav1links">
+                        Magazine 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-chevron-down">
+                        <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">5-Ingredient Dinners</a>
+                        <a href="#" class="dropdown-item">One-Pot Meals</a>
+                        <a href="#" class="dropdown-item">Quick & Easy</a>
+                        <a href="#" class="dropdown-item">30-Minute Meals</a>
+                        <a href="#" class="dropdown-item">Family Dinners</a>
+                        <a href="#" class="dropdown-item">Soups, Stews & Chili</a>
+                        <a href="#" class="dropdown-item">Comfort Food</a>
+                        <a href="#" class="dropdown-item">Main Dishes</a>
+                        <a href="#" class="dropdown-item">Sheet Pan Dinners</a>
+                        <a href="#" class="dropdown-item">View All</a>
+                    </div>
+                </li>
                 <a href="#">
                     <li class="nav1links">
                         Newsletters
@@ -62,15 +85,159 @@
         </nav>   
         <nav id="nav2">
             <ul>
-                <li>DINNERS</li>
-                <li>MEALS</li>
-                <li>INGREDIENTS</li>
-                <li>OCCASIONS</li>
-                <li>CUISINES</li>
-                <li>KITCHEN TIPS</li>
-                <li>NEWS</li>
-                <li>FEATURES</li>
-                <li>ABOUT US</li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        DINNERS
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item"> 5-Ingredient Dinners</a>
+                        <a href="#" class="dropdown-item"> One-Pot Meals</a>
+                        <a href="#" class="dropdown-item"> Quick & Easy</a>
+                        <a href="#" class="dropdown-item"> 30-Minute Meals</a>
+                        <a href="#" class="dropdown-item"> Family Dinners</a>
+                        <a href="#" class="dropdown-item"> Soups, Stews & Chili</a>
+                        <a href="#" class="dropdown-item"> Comfort Food</a>
+                        <a href="#" class="dropdown-item"> Main Dishes</a>
+                        <a href="#" class="dropdown-item"> Sheet Pan Dinners</a>
+                        <a href="#" class="dropdown-item">Log View All</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        MEALS
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item"> 5-Ingredient Dinners</a>
+                        <a href="#" class="dropdown-item"> One-Pot Meals</a>
+                        <a href="#" class="dropdown-item"> Quick & Easy</a>
+                        <a href="#" class="dropdown-item"> 30-Minute Meals</a>
+                        <a href="#" class="dropdown-item"> Family Dinners</a>
+                        <a href="#" class="dropdown-item"> Soups, Stews & Chili</a>
+                        <a href="#" class="dropdown-item"> Comfort Food</a>
+                        <a href="#" class="dropdown-item"> Main Dishes</a>
+                        <a href="#" class="dropdown-item"> Sheet Pan Dinners</a>
+                        <a href="#" class="dropdown-item">Log View All</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        INGREDIENTS
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item"> 5-Ingredient Dinners</a>
+                        <a href="#" class="dropdown-item"> One-Pot Meals</a>
+                        <a href="#" class="dropdown-item"> Quick & Easy</a>
+                        <a href="#" class="dropdown-item"> 30-Minute Meals</a>
+                        <a href="#" class="dropdown-item"> Family Dinners</a>
+                        <a href="#" class="dropdown-item"> Soups, Stews & Chili</a>
+                        <a href="#" class="dropdown-item"> Comfort Food</a>
+                        <a href="#" class="dropdown-item"> Main Dishes</a>
+                        <a href="#" class="dropdown-item"> Sheet Pan Dinners</a>
+                        <a href="#" class="dropdown-item">Log View All</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        OCCASIONS
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item"> 5-Ingredient Dinners</a>
+                        <a href="#" class="dropdown-item"> One-Pot Meals</a>
+                        <a href="#" class="dropdown-item"> Quick & Easy</a>
+                        <a href="#" class="dropdown-item"> 30-Minute Meals</a>
+                        <a href="#" class="dropdown-item"> Family Dinners</a>
+                        <a href="#" class="dropdown-item"> Soups, Stews & Chili</a>
+                        <a href="#" class="dropdown-item"> Comfort Food</a>
+                        <a href="#" class="dropdown-item"> Main Dishes</a>
+                        <a href="#" class="dropdown-item"> Sheet Pan Dinners</a>
+                        <a href="#" class="dropdown-item">Log View All</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        CUISINES
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item"> 5-Ingredient Dinners</a>
+                        <a href="#" class="dropdown-item"> One-Pot Meals</a>
+                        <a href="#" class="dropdown-item"> Quick & Easy</a>
+                        <a href="#" class="dropdown-item"> 30-Minute Meals</a>
+                        <a href="#" class="dropdown-item"> Family Dinners</a>
+                        <a href="#" class="dropdown-item"> Soups, Stews & Chili</a>
+                        <a href="#" class="dropdown-item"> Comfort Food</a>
+                        <a href="#" class="dropdown-item"> Main Dishes</a>
+                        <a href="#" class="dropdown-item"> Sheet Pan Dinners</a>
+                        <a href="#" class="dropdown-item">Log View All</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        KITCHEN TIPS
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item"> 5-Ingredient Dinners</a>
+                        <a href="#" class="dropdown-item"> One-Pot Meals</a>
+                        <a href="#" class="dropdown-item"> Quick & Easy</a>
+                        <a href="#" class="dropdown-item"> 30-Minute Meals</a>
+                        <a href="#" class="dropdown-item"> Family Dinners</a>
+                        <a href="#" class="dropdown-item"> Soups, Stews & Chili</a>
+                        <a href="#" class="dropdown-item"> Comfort Food</a>
+                        <a href="#" class="dropdown-item"> Main Dishes</a>
+                        <a href="#" class="dropdown-item"> Sheet Pan Dinners</a>
+                        <a href="#" class="dropdown-item">Log View All</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        NEWS
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item"> 5-Ingredient Dinners</a>
+                        <a href="#" class="dropdown-item"> One-Pot Meals</a>
+                        <a href="#" class="dropdown-item"> Quick & Easy</a>
+                        <a href="#" class="dropdown-item"> 30-Minute Meals</a>
+                        <a href="#" class="dropdown-item"> Family Dinners</a>
+                        <a href="#" class="dropdown-item"> Soups, Stews & Chili</a>
+                        <a href="#" class="dropdown-item"> Comfort Food</a>
+                        <a href="#" class="dropdown-item"> Main Dishes</a>
+                        <a href="#" class="dropdown-item"> Sheet Pan Dinners</a>
+                        <a href="#" class="dropdown-item">Log View All</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        FEATURES
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item"> 5-Ingredient Dinners</a>
+                        <a href="#" class="dropdown-item"> One-Pot Meals</a>
+                        <a href="#" class="dropdown-item"> Quick & Easy</a>
+                        <a href="#" class="dropdown-item"> 30-Minute Meals</a>
+                        <a href="#" class="dropdown-item"> Family Dinners</a>
+                        <a href="#" class="dropdown-item"> Soups, Stews & Chili</a>
+                        <a href="#" class="dropdown-item"> Comfort Food</a>
+                        <a href="#" class="dropdown-item"> Main Dishes</a>
+                        <a href="#" class="dropdown-item"> Sheet Pan Dinners</a>
+                        <a href="#" class="dropdown-item">Log View All</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        ABOUT US
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item"> 5-Ingredient Dinners</a>
+                        <a href="#" class="dropdown-item"> One-Pot Meals</a>
+                        <a href="#" class="dropdown-item"> Quick & Easy</a>
+                        <a href="#" class="dropdown-item"> 30-Minute Meals</a>
+                        <a href="#" class="dropdown-item"> Family Dinners</a>
+                        <a href="#" class="dropdown-item"> Soups, Stews & Chili</a>
+                        <a href="#" class="dropdown-item"> Comfort Food</a>
+                        <a href="#" class="dropdown-item"> Main Dishes</a>
+                        <a href="#" class="dropdown-item"> Sheet Pan Dinners</a>
+                        <a href="#" class="dropdown-item">Log View All</a>
+                    </div>
+                </li>
             </ul>
             <div>
                 <a href="#">GET THE MAGAZINE</a>
@@ -231,41 +398,45 @@
             <h2>Picnic Salad <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg></h2>
 
             <div class="picnic">
-                <div class="picnic1 picnics">
-                    <img src="/public/picnic1.webp" alt="#">
-                    <p>NO MAYO</p>
-                    <h3>Sweet Restaurant Slaw</h3>
-                    <h5>★★★★★ <span>3,311 Ratings</span></h5>
+                <div>
+                    <div class="picnic1 picnics">
+                        <img src="/public/picnic1.webp" alt="#">
+                        <p>NO MAYO</p>
+                        <h3>Sweet Restaurant Slaw</h3>
+                        <h5>★★★★★ <span>3,311 Ratings</span></h5>
+                    </div>
+                    <div class="picnic2 picnics">
+                        <img src="/public/picnic2.webp" alt="#">
+                        <p>NO MAYO</p>
+                        <h3>Sweet Restaurant Slaw</h3>
+                        <h5>★★★★★ <span>735 Ratings</span></h5>
+                    </div>
+                    <div class="picnic3 picnics">
+                        <img src="/public/picnic3.webp" alt="#">
+                        <p>NO MAYO</p>
+                        <h3>Sweet Restaurant Slaw</h3>
+                        <h5>★★★★★ <span>880 Ratings</span></h5>
+                    </div>
                 </div>
-                <div class="picnic2 picnics">
-                    <img src="/public/picnic2.webp" alt="#">
-                    <p>NO MAYO</p>
-                    <h3>Sweet Restaurant Slaw</h3>
-                    <h5>★★★★★ <span>735 Ratings</span></h5>
-                </div>
-                <div class="picnic3 picnics">
-                    <img src="/public/picnic3.webp" alt="#">
-                    <p>NO MAYO</p>
-                    <h3>Sweet Restaurant Slaw</h3>
-                    <h5>★★★★★ <span>880 Ratings</span></h5>
-                </div>
-                <div class="picnic4 picnics">
-                    <img src="/public/picnic4.webp" alt="#">
-                    <p>NO MAYO</p>
-                    <h3>Sweet Restaurant Slaw</h3>
-                    <h5>★★★★★ <span>2,732 Ratings</span></h5>
-                </div>
-                <div class="picnic5 picnics">
-                    <img src="/public/picnic5.webp" alt="#">
-                    <p>NO MAYO</p>
-                    <h3>Sweet Restaurant Slaw</h3>
-                    <h5>★★★★★ <span>506 Ratings</span></h5>
-                </div>
-                <div class="picnic6 picnics">
-                    <img src="/public/picnic6.webp" alt="#">
-                    <p>NO MAYO</p>
-                    <h3>Sweet Restaurant Slaw</h3>
-                    <h5>★★★★★ <span>1,880 Ratings</span></h5>
+                <div>
+                    <div class="picnic4 picnics">
+                        <img src="/public/picnic4.webp" alt="#">
+                        <p>NO MAYO</p>
+                        <h3>Sweet Restaurant Slaw</h3>
+                        <h5>★★★★★ <span>2,732 Ratings</span></h5>
+                    </div>
+                    <div class="picnic5 picnics">
+                        <img src="/public/picnic5.webp" alt="#">
+                        <p>NO MAYO</p>
+                        <h3>Sweet Restaurant Slaw</h3>
+                        <h5>★★★★★ <span>506 Ratings</span></h5>
+                    </div>
+                    <div class="picnic6 picnics">
+                        <img src="/public/picnic6.webp" alt="#">
+                        <p>NO MAYO</p>
+                        <h3>Sweet Restaurant Slaw</h3>
+                        <h5>★★★★★ <span>1,880 Ratings</span></h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -505,8 +676,8 @@
         </div>
         <div id="section9">
             <h2>What We’re Saving to MyRecipes <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg></h2>
-
             <div class="picnic">
+            <div>
                 <div class="picnic1 picnics">
                     <img src="/public/SR1.webp" alt="#">
                     <p>CHICKEN</p>
@@ -524,6 +695,8 @@
                     <h3>Michigan Olive Burger</h3>
                     <h5>★★★★★ <span>880 Ratings</span></h5>
                 </div>
+            </div>
+            <div>
                 <div class="picnic4 picnics">
                     <img src="/public/SR4.webp" alt="#">
                     <p>RHUBARB CRISPS AND CRUMBLES RECIPES</p>
@@ -540,6 +713,7 @@
                     <p>TOMATO PASTA SALAD RECIPES</p>
                     <h3>Bloody Mary Pasta Salad</h3>
                 </div>
+            </div>
             </div>
         </div>
         <div id="section10">

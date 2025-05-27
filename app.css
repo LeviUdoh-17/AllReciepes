@@ -21,29 +21,100 @@ h1, h2, h3, h4, h5{
     padding: 22px 5%;
 }
 header{
-    width: max-content;
+    width: 100vw;
     box-shadow: 0 .125rem .375rem rgba(0, 0, 0, .15);
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.dropdown-toggle:first-child{
+    width: max-content;
+}
+
+.dropdown-toggle:hover {
+    transform: translateY(-2px);
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    background: white;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 12rem;
+    width: max-content;
+    overflow-y: auto;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #333 !important;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    font-weight: 400;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+    font-weight: 800;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #667eea;
 }
 #nav1{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
 }
 #logo{
-    width: 192px;
+    width: 15rem;
 }
 #nav1 ul{
     display: flex;
     align-items: center;
     list-style-type: none;
+    padding: 0;
+    width: 100%;
     justify-content: space-between;
 }
 #formInput{
     border: 1px solid black;
-    border-radius: 4px;
+    border-radius: .2rem;
     display: flex;
     align-items: center;
     font-size: 1rem;
-    width: 27.25rem;
+    width: 30rem;
     justify-content: space-between;
     height: 2.25rem;
 }
@@ -56,6 +127,8 @@ header{
     color: #fff;
     border: 1px solid #d54215;
     height: 2.25rem;
+    border-left: 0;
+    border-radius: .2rem;
 }
 #login{
     display: flex;
@@ -76,6 +149,10 @@ header{
     justify-content: center;
     font-size: .875rem;
     font-weight: 400;
+    width: max-content;
+}
+.nav1links:last-child img{
+    max-width: 6rem;
 }
 .navDivider{
     border-right: 1px solid #00000026;
@@ -99,9 +176,9 @@ a{
     padding-left: 0;
 }
 #nav2 li{
-    padding: 0 2.5rem 0 0;
+    padding: 0 2rem 0 0;
     font-weight: 700;
-    font-size: .875rem;
+    font-size: .775rem;
 }
 #nav2 div{
     display: flex;
@@ -147,7 +224,7 @@ a{
     }
 #nav3{
     opacity: 1 o !important;
-    dis play: flex;
+    display: flex;
     justify-content: space-between;
 }
 #logo3{
@@ -167,6 +244,7 @@ a{
     align-items: center;
     list-style-type: none;
     justify-content: space-between;
+    width: -webkit-fill-available;
 }
 .navDivider2{
     border-right: 1px solid #00000026;
@@ -254,18 +332,14 @@ a{
 
 .newsfeed {
     padding: 0 5%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
     gap: 30px;
+    margin-top: 2rem;
     margin-bottom: 3rem;
 }
 
-.main {
-    grid-area: 1 / 1 / 13 / 9;
-}
-
-.aside1 {
-    grid-area: 1 / 2 / 13 / 13;
+.newsfeed a:first-child {
+    width: 130%;
 }
 .main h4{
     color: #000000a6;
@@ -418,16 +492,20 @@ a{
 #section3 svg{
     color: #d54215;
 }
-.picnic {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.picnic{
+    display: flex;
+    flex-direction: column;
+}
+.picnic div {
+  display: flex;
+  flex-direction: row;
   gap: 2rem;
   margin-bottom: 4rem;
 }
 
 .picnics {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
   align-items: center;
   border-radius: 12px;
   overflow: hidden;
@@ -914,16 +992,16 @@ a{
     color: #d54215;
 }
 .mayDay{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 0px;
+    display: flex;
     margin-bottom: 3rem;
     gap: 2rem;
 }
 .main2 { 
-    grid-area: 1 / 5 / 13 / 13;
-    padding-left: 2rem;
+    width: 130%;
+    justify-content: center;
+}
+.main2 div{
+    justify-self: center;
 }
 .main2 h4{
     color: #000000a6;
@@ -972,55 +1050,6 @@ a{
 }
 #section9 svg{
     color: #d54215;
-}
-.picnic {
-display: grid;
-grid-template-columns: repeat(9, 1fr);
-grid-template-rows: repeat(6, 1fr);
-grid-column-gap: 60px;
-grid-row-gap: 80px;
-}
-
-.picnic1 { 
-    grid-area: 1 / 1 / 4 / 4; 
-}
-.picnic2 { 
-    grid-area: 1 / 4 / 4 / 7; 
-}
-.picnic3 { 
-    grid-area: 1 / 7 / 4 / 10; 
-}
-.picnic4 { 
-    grid-area: 4 / 1 / 7 / 4; 
-}
-.picnic5 { 
-    grid-area: 4 / 4 / 7 / 7; 
-}
-.picnic6 { 
-    grid-area: 4 / 7 / 7 / 10; 
-}
-.picnics p{
-    font-size: .875rem;
-    font-weight: 700;
-    color: #000000a6;
-    margin-bottom: .5rem;
-}
-.picnics h3{
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-.picnic h3:hover{
-    text-decoration-line: underline;
-    text-decoration-color: #d54215;
-}
-.picnics span{
-    color: #000000a6;
-    font-weight: 400;
-    font-size: .9rem;
-}
-.picnics h5{
-    font-size: 1.7rem;
-    color: #f9ac3a;
 }
 
 /* SECTION 10 */
@@ -1226,7 +1255,7 @@ ul{
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 2rem;
+        gap: 15rem;
         padding: 2rem 2vw;
     }
     #footerLogo {
@@ -1242,7 +1271,7 @@ ul{
         justify-content: flex-start;
     }
     #fL1, #fL2 {
-        flex: 1 1 0;
+        flex: .3 1 0;
     }
     #fL1 ul, #sub1 ul, #sub2 ul {
         gap: 0.5rem 0;
@@ -1253,7 +1282,53 @@ ul{
         gap: 0.5rem;
     }
 }
+@media screen and (max-width: 768px){
+    .newsfeed{
+        flex-direction: column;
+        align-items: center;
+    }
+    .newsfeed a:first-child {
+        width: 100%;
+    }
 
+    .trends{
+        flex-direction: column;
+        align-items: center;
+    }
+    .trends img{
+        width: 100%;
+    }
+    .main div img, .main2 div img{
+        width:80%;
+    }
+    .main2{
+        margin: auto;
+    }
+    #section8 .mayDay{
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .aside2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .aside2ItemText {
+        max-width: 19rem;
+    }
+    #mealCategory{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .meals img{
+        width: 20rem;
+    }
+    .meals h2{
+        width: 20rem;
+    }
+}
 /* Small screens: stack everything in one column */
 @media (max-width: 700px) {
     footer {
@@ -1318,6 +1393,10 @@ ul{
         align-items: center;
         gap: 1rem;
     }
+    .picnic div{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1366,35 +1445,10 @@ ul{
     }
 }
 
-/* --- Responsive & Style Fixes for Sections 3-11 --- */
-
-/* General box-sizing for all elements */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-/* Section 3 & 9: Picnic grid responsive fix */
-@media (max-width: 1024px) {
-    #section3 .picnic,
-    #section9 .picnic {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        grid-column-gap: 20px;
-        grid-row-gap: 30px;
-    }
-    #section3 .picnics,
-    #section9 .picnics {
-        min-width: 0;
-    }
-}
-@media (max-width: 700px) {
-    #section3 .picnic,
-    #section9 .picnic {
-        grid-template-columns: 1fr;
-        grid-row-gap: 20px;
-    }
 }
 
 /* Section 4: Search and tags responsive */
@@ -1467,16 +1521,24 @@ ul{
         width: 100%;
     }
     .meals {
-        flex-direction: column;
-        align-items: flex-start;
         padding: 1.5rem 0;
     }
     .meals img {
         margin-bottom: 1rem;
-        margin-right: 0;
-        width: 100%;
+        margin-right: 2rem;
+        width: 10rem;
         max-width: 350px;
         height: auto;
+    }
+    .meals h2{
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+    #searchReciepe{
+        width: 12rem;
+    }
+    #formInput{
+        width: 100%;
     }
 }
 
@@ -1513,11 +1575,17 @@ ul{
         flex-direction: column;
         align-items: center;
         padding: 2rem 1rem;
+        gap: 2rem;  
+        justify-content: center;
     }
     #footerLinkContainer {
-        flex-direction: column;
+        flex-direction: row;
         gap: 2rem;
         padding-right: 0;
+        justify-content: center;
+    }
+    #fL1 ul + #sub1 ul + #sub2 ul{
+        justify-content: center;
     }
 }
 
@@ -1537,4 +1605,28 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+@media screen and (max-width: 1200px) {
+    #nav1 + #nav2{
+        display: none;
+    }
+    #nav3 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0.5rem 2%;
+        z-index: 1000;
+        opacity: 1 !important;
+    }
+    #header{
+        max-height: max-content;
+    }
+    #logo3 img {
+        width: 40%;
+    }
+    #formInput{
+        width: 20rem;
+    }
 }
