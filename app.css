@@ -4,6 +4,9 @@ html, body{
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
 }
 html{
     overflow-x: hidden;
@@ -18,6 +21,7 @@ h1, h2, h3, h4, h5{
     padding: 22px 5%;
 }
 header{
+    width: max-content;
     box-shadow: 0 .125rem .375rem rgba(0, 0, 0, .15);
 }
 #nav1{
@@ -141,10 +145,9 @@ a{
         }
         }
     }
-}
 #nav3{
     opacity: 1 o !important;
-    display: flex;
+    dis play: flex;
     justify-content: space-between;
 }
 #logo3{
@@ -203,13 +206,20 @@ a{
 .snackStat h3{
     font-size: 1.1rem;
     font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
 }
 .snackStat h3:hover{
     text-decoration: underline;
 }
-.snackStat span{
+.snackStat span {
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .before {
     content: "";
@@ -246,13 +256,16 @@ a{
     padding: 0 5%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 0px;
+    gap: 30px;
     margin-bottom: 3rem;
 }
 
-.main { 
-    grid-area: 1 / 1 / 13 / 9; 
+.main {
+    grid-area: 1 / 1 / 13 / 9;
+}
+
+.aside1 {
+    grid-area: 1 / 2 / 13 / 13;
 }
 .main h4{
     color: #000000a6;
@@ -271,9 +284,6 @@ a{
 .main p{
     font-size: 1rem;
     font-weight: 400;
-}
-.aside1 { 
-    grid-area: 1 / 2 / 13 / 13; 
 }
 .aside1 h2{
     font-size: 2.25rem;
@@ -409,54 +419,53 @@ a{
     color: #d54215;
 }
 .picnic {
-display: grid;
-grid-template-columns: repeat(9, 1fr);
-grid-template-rows: repeat(6, 1fr);
-grid-column-gap: 60px;
-grid-row-gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
-.picnic1 { 
-    grid-area: 1 / 1 / 4 / 4; 
+.picnics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  padding: 1rem;
 }
-.picnic2 { 
-    grid-area: 1 / 4 / 4 / 7; 
+
+.picnics:hover {
+  transform: scale(1.03);
 }
-.picnic3 { 
-    grid-area: 1 / 7 / 4 / 10; 
+
+.picnics img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
-.picnic4 { 
-    grid-area: 4 / 1 / 7 / 4; 
+
+.picnics p {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #d54215;
+  margin: 0.5rem 0;
 }
-.picnic5 { 
-    grid-area: 4 / 4 / 7 / 7; 
+
+.picnics h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  text-align: center;
 }
-.picnic6 { 
-    grid-area: 4 / 7 / 7 / 10; 
+
+.picnics h5 {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.3rem;
 }
-.picnics p{
-    font-size: .875rem;
-    font-weight: 700;
-    color: #000000a6;
-    margin-bottom: .5rem;
-}
-.picnics h3{
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-.picnic h3:hover{
-    text-decoration-line: underline;
-    text-decoration-color: #d54215;
-}
-.picnics span{
-    color: #000000a6;
-    font-weight: 400;
-    font-size: .9rem;
-}
-.picnics h5{
-    font-size: 1.7rem;
-    color: #f9ac3a;
-}
+
 
 /* SECTION 4 */
 #section4 {
@@ -650,7 +659,7 @@ grid-row-gap: 80px;
 }
 
 .user-quote {
-    font-size: .3rem;
+    font-size: 1rem;
     text-transform: capitalize;
     font-weight: 400;
     margin-bottom: 10px;
@@ -1191,4 +1200,341 @@ ul{
     padding-left: 5%;
     align-items: center;
     gap: 2rem;
+}
+
+@media (max-width: 1230px) {
+    .snackStat h3{
+        font-size: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .3rem;
+        text-align: center;
+    }
+    .snackStat span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    footer {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 2rem 2vw;
+    }
+    #footerLogo {
+        min-width: 220px;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+    #footerLinkContainer {
+        flex-direction: row;
+        gap: 3rem;
+        padding-right: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    #fL1, #fL2 {
+        flex: 1 1 0;
+    }
+    #fL1 ul, #sub1 ul, #sub2 ul {
+        gap: 0.5rem 0;
+    }
+    #fL2 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Small screens: stack everything in one column */
+@media (max-width: 700px) {
+    footer {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1.5rem 2vw;
+        gap: 1.5rem;
+    }
+    #footerLogo {
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    #footerLinkContainer {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-right: 0;
+        width: 100%;
+        align-items: center;
+    }
+    #fL1, #fL2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #fL1 ul, #sub1 ul, #sub2 ul {
+        align-items: center;
+        text-align: center;
+    }
+    #fL2 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .fullContainer {
+        padding: 10px 2%;
+    }
+    
+    #logo3 img {
+        width: 70%;
+    }
+    
+    #nav3 #formInput {
+        max-width: max-content;
+        min-width: 150px;
+    }
+    
+    #nav3 ul {
+        gap: 0.2rem;
+    }
+    
+    #login p {
+        display: none;
+    }
+    
+    .nav1links {
+        font-size: 0.75rem;
+    }
+    #footerLinkContainer {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #nav3 {
+        padding: 0.5rem 2%;
+    }
+    
+    #logo3 {
+        gap: 0.5rem;
+    }
+    
+    #logo3 img {
+        width: 90%;
+    }
+    
+    #nav3 #formInput {
+        max-width: max-content;
+        min-width: 120px;
+        height: 2rem;
+    }
+    
+    #nav3 #formInput button {
+        height: 2rem;
+        padding: 0 8px;
+    }
+    
+    #nav3 #searchReciepe {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
+    #footerLinkContainer {
+        align-items: center;
+        gap: 1rem;
+    }
+    #fL2, #fL1{
+        flex-direction: row;
+    }
+}
+@media (max-width: 425px){
+    #nav3 ul{
+        display: none;
+    }
+    #logo3 img{
+        width: 60%;
+        margin-left: 4rem;
+    }
+}
+
+/* --- Responsive & Style Fixes for Sections 3-11 --- */
+
+/* General box-sizing for all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Section 3 & 9: Picnic grid responsive fix */
+@media (max-width: 1024px) {
+    #section3 .picnic,
+    #section9 .picnic {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+    }
+    #section3 .picnics,
+    #section9 .picnics {
+        min-width: 0;
+    }
+}
+@media (max-width: 700px) {
+    #section3 .picnic,
+    #section9 .picnic {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+}
+
+/* Section 4: Search and tags responsive */
+@media (max-width: 900px) {
+    #section4 {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 20px 5vw;
+        max-width: 100vw;
+    }
+    .search-container-wrapper {
+        gap: 10px;
+    }
+    .search-container {
+        max-width: 100%;
+    }
+    .popular-section {
+        gap: 6px;
+    }
+}
+
+/* Section 5: Columns stack on mobile */
+@media (max-width: 900px) {
+    #section5 .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .left-column,
+    .right-column {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    #teamSelectionCollection {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Section 5: Fix .user-quote font size */
+.user-quote {
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* Section 6 & 10: Recipe/Mexican card responsive */
+@media (max-width: 700px) {
+    #section6,
+    #section10 {
+        height: auto;
+        padding: 2vw;
+    }
+    #recipes,
+    #mexican {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* Section 7 & 11: Meals list responsive */
+@media (max-width: 900px) {
+    #section7,
+    #section11 {
+        flex-direction: column;
+        margin: 0 2vw;
+    }
+    #mealCategory,
+    #adv1 {
+        width: 100%;
+    }
+    .meals {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 0;
+    }
+    .meals img {
+        margin-bottom: 1rem;
+        margin-right: 0;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+}
+
+/* Section 8: May Days grid responsive */
+@media (max-width: 900px) {
+    #section8 .mayDay {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .main2 {
+        padding-left: 0;
+    }
+    .aside2Item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .aside2Item img {
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+}
+
+/* Section 9: Picnic grid fix (already handled above) */
+
+/* Section 11: Meals list responsive (already handled above) */
+
+/* Footer responsive */
+@media (max-width: 900px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+    #footerLinkContainer {
+        flex-direction: column;
+        gap: 2rem;
+        padding-right: 0;
+    }
+}
+
+/* Remove duplicate IDs for #mealCategory and #adv1 in sections 7 and 11 */
+#section7 #mealCategory,
+#section11 #mealCategory {
+    width: 100%;
+}
+#section7 #adv1,
+#section11 #adv1 {
+    width: 100%;
+    min-height: 0;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
