@@ -1231,6 +1231,147 @@ ul{
     gap: 2rem;
 }
 
+/* SIDEBAR */
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* display: flex; */
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2%;
+    height: 100vh;
+    width: 25rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    display: none;
+}
+#sidebarToggle{
+    display: none;
+}
+#sidebarToggle:checked + #sidebar{
+    display: flex;
+}
+
+#sidebarHeader{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 3rem;
+    flex-shrink: 0;
+}
+#sidebarHeader label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .8rem;
+    margin-right: .5rem;
+}
+#sidebarHeader img{
+    width: 10rem;
+}
+
+#sidebarSearch label{
+    font-size: 1rem;
+    font-weight: 700;
+}
+#sidebarSearch{
+    flex-shrink: 0;
+}
+#sidebarSearch form{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    max-width: max-content;
+}
+#sidebarSearch input{
+    height: 2.8rem;
+    width: 20rem;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: 400;
+}
+#sidebarSearch button{
+    height: 2.9rem;
+    color: #fff;
+    background-color: #d54215;
+    border-color: transparent;
+}
+
+#sideBarSection1{
+    display: flex;
+    flex-direction: column;
+    font-size: .875rem;
+    font-weight: 700;
+    justify-content: center;
+    align-items: start;
+    margin: 2rem 0;
+    flex-shrink: 0;
+}
+#sideBarSection1 a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem 0;
+    width: 100%;
+}
+#sideBarSection1 a:last-child{
+    color: #d54215;
+}
+#sideBarSection1 svg{
+    color: #00000053;
+    font-size: .775rem;
+}
+.sidebarBorderT{
+    border-top: 1px solid #00000026;
+}
+.sidebarBorderB{
+    border-bottom: 1px solid #00000026;
+}
+
+#sideBarSection2{
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 1rem 0;
+}
+#sideBarSection2 a{
+    font-size: .875rem;
+    font-weight: 400;
+    color: #000000f2;
+    padding: .5rem 0;
+}
+#sideBarSection2 a:first-child{
+    display: flex;
+    align-items: center;
+}
+#sideBarSection2 a:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+
+#sideBarSection3{
+    margin: 2rem .9rem;
+    flex-shrink: 0;
+}
+#sideBarSection3 p{
+    font-size: .875rem;
+    font-weight: 400;
+    color: #0000006f;
+}
+#sideBarSection3 div{
+    display: flex;
+    justify-content: space-evenly;
+    color: #0000006f;
+}
+
 @media (max-width: 1230px) {
     .snackStat h3{
         font-size: 1.1rem;
